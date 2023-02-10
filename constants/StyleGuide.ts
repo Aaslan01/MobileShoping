@@ -19,7 +19,13 @@ const StyleGuide = {
     secondary: yellow,
     gray: gray,
   },
-
+  rowCenter:{
+    flexDirection: 'row', justifyContent: 'space-between'
+  },
+  iconsImage: {
+    width:32,
+    height:32,
+  },
   boldText: {
     color: dark,
     fontFamily: 'Poppins-Bold',
@@ -32,7 +38,6 @@ const StyleGuide = {
     color: dark,
     fontFamily: 'Poppins-Regular',
   },
-
 };
 
 export default StyleGuide;

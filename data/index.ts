@@ -13,6 +13,15 @@ export const user: User = {
   image: require("../assets/images/user/avatar.png"),
 };
 
+interface Icons {
+  search: ImageSourcePropType;
+  shopping: ImageSourcePropType;
+}
+
+export const icons: Icons = {
+  search: require("../assets/images/search.png"),
+  shopping: require("../assets/images/shopping.png"),
+};
 export interface Category {
   id: number;
   name: string;
