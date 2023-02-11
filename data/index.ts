@@ -16,6 +16,7 @@ export const user: User = {
 interface Icons {
   search: ImageSourcePropType;
   shopping: ImageSourcePropType;
+  shoppingWhite: ImageSourcePropType;
   rating: ImageSourcePropType;
   backArrow: ImageSourcePropType
 }
@@ -23,6 +24,7 @@ interface Icons {
 export const icons: Icons = {
   search: require("../assets/images/search.png"),
   shopping: require("../assets/images/shopping.png"),
+  shoppingWhite: require("../assets/images/shopingW.png"),
   backArrow: require("../assets/images/backArrow.png"),
   rating: require("../assets/images/rating.png"),
 };
