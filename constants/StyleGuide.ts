@@ -20,7 +20,7 @@ const StyleGuide = {
     gray: gray,
   },
   rowCenter:{
-    flexDirection: 'row', justifyContent: 'space-between'
+    flexDirection: 'row' as 'row', justifyContent: 'space-between'
   },
   row:{
     flexDirection: 'row',
