@@ -6,8 +6,10 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen'
-const HomeScreen = () => {
+import { StackActions, useFocusEffect, useNavigation, useRoute } from '@react-navigation/native'
 
+const HomeScreen = () => {
+  const navigation = useNavigation()
   const [activeCategory, setCategory] = useState(0)
   return (
     <SafeAreaView >
@@ -79,9 +81,11 @@ const HomeScreen = () => {
             {
               products.map((product) => (
                 <TouchableOpacity
+                onPress={()=> navigation.navigate('Product')}
                   style={{
                     width: wp(44)
                   }}>
+
                   <Image
                     style={{
                       height: hp(28),

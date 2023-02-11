@@ -28,8 +28,15 @@ function App() {
   return (
     <NavigationContainer>{
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Product" component={ProductScreen} />
+        <Stack.Screen 
+        name="Home" 
+        component={HomeScreen} 
+        options={{header: () => null}}
+        />
+        <Stack.Screen 
+        name="Product" 
+        component={ProductScreen} 
+        />
       </Stack.Navigator>
     }</NavigationContainer>
   );
