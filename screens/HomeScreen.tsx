@@ -81,10 +81,13 @@ const HomeScreen = () => {
             {
               products.map((product) => (
                 <TouchableOpacity
-                onPress={()=> navigation.navigate('Product')}
+                onPress={()=> navigation.navigate('Product', {
+                  item: product
+                })}
                   style={{
                     width: wp(44)
-                  }}>
+                  }}
+                  key={product.id}>
 
                   <Image
                     style={{

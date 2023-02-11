@@ -36,6 +36,7 @@ function App() {
         <Stack.Screen 
         name="Product" 
         component={ProductScreen} 
+        options={{header: () => null}}
         />
       </Stack.Navigator>
     }</NavigationContainer>

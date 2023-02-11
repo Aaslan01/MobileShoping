@@ -16,11 +16,13 @@ export const user: User = {
 interface Icons {
   search: ImageSourcePropType;
   shopping: ImageSourcePropType;
+  backArrow: ImageSourcePropType
 }
 
 export const icons: Icons = {
   search: require("../assets/images/search.png"),
   shopping: require("../assets/images/shopping.png"),
+  backArrow: require("../assets/images/backArrow.png"),
 };
 export interface Category {
   id: number;
