@@ -1,7 +1,7 @@
 import { View, Text, Image, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import { useNavigation, useRoute } from '@react-navigation/native';
-import { user, icons } from '../data'
+import { icons } from '../data'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import StyleGuide from '../constants/StyleGuide';
 import {
@@ -9,13 +9,10 @@ import {
     heightPercentageToDP as hp,
 } from 'react-native-responsive-screen'
 import { ScrollView } from 'react-native-gesture-handler';
-import { color } from 'react-native-reanimated';
 
 const ProductScreen = () => {
     const navigation = useNavigation()
     const params = useRoute().params as any;
-    console.log("params", params.item);
-
     const [activeColor, setActiveColor] = useState(0)
     const [activeSize, setActiveSize] = useState(0)
     return (
