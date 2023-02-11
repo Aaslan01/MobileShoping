@@ -5,7 +5,7 @@
  * @format
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Image,
   SafeAreaView,
@@ -13,13 +13,16 @@ import {
   StatusBar,
   StyleSheet,
   Text,
+  TouchableOpacity,
   useColorScheme,
   View,
 } from 'react-native';
 import StyleGuide from './constants/StyleGuide';
-import { user, icons } from './data';
+import { user, icons, categories } from './data';
 
 function App() {
+
+  const [activeCategory, setCategory] = useState(0)
   return (
     <SafeAreaView style={{ padding: 16 }}>
       <View style={StyleGuide.rowCenter}>
@@ -39,6 +42,30 @@ function App() {
       <Text style={[StyleGuide.boldText, { fontSize: 16 }]}>
         Categories
       </Text>
+      <ScrollView 
+       horizontal
+      style={StyleGuide.row}
+      showsHorizontalScrollIndicator={false}
+      >
+        {
+          [{ id: 0, name: 'All' }, ...categories].map((value, index) => (
+            <TouchableOpacity key={value.id}
+              style={{
+                paddingHorizontal: 20,
+                paddingVertical: 5,
+                borderColor: StyleGuide.colors.darkText,
+                borderWidth: 1,
+                borderRadius: 20,
+                marginHorizontal: 5,
+                backgroundColor: activeCategory === index ? StyleGuide.colors.primary : null
+              }}
+              onPress={()=> setCategory(index)}
+            >
+              <Text style={[StyleGuide.regularText, { color: activeCategory === index ? StyleGuide.colors.onPrimary : StyleGuide.colors.darkText }]}>{value.name}</Text>
+            </TouchableOpacity>
+          ))
+        }
+      </ScrollView>
     </SafeAreaView>
   );
 }

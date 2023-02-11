@@ -22,6 +22,9 @@ const StyleGuide = {
   rowCenter:{
     flexDirection: 'row', justifyContent: 'space-between'
   },
+  row:{
+    flexDirection: 'row',
+  },
   iconsImage: {
     width:32,
     height:32,
