@@ -12,8 +12,10 @@ const HomeScreen = () => {
   const navigation = useNavigation()
   const [activeCategory, setCategory] = useState(0)
   return (
-    <SafeAreaView >
-        <ScrollView style={{ padding: 16 }}>
+    <SafeAreaView>
+        <ScrollView 
+        showsVerticalScrollIndicator={false}
+        style={{ padding: 16 }}>
           <View style={StyleGuide.rowCenter}>
             <View style={{ flexDirection: 'row' }}>
               <Image source={user.image} />
